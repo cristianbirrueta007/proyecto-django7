@@ -1,0 +1,50 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block titulo %}{% endblock %}</title>
+    {%load static%}
+<link  href="{%static 'inicio/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+<link  href="{% static 'inicio/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
+<link href="{% static 'inicio/css/styles.css'%}" rel="stylesheet" type="text/css">
+<link href="{% static 'inicio/css/icons.css'%}" rel="stylesheet" type="text/css" >
+</head>
+<body>
+    <!--MENU-->
+    <div class="page-container">
+        <!--Barra de menu-->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <!--Menu de navegacion-->
+                <ul class="navigation">
+                        <li><a href="{%url 'Principal'%}">Home</a></li>
+                        <li><a href="{%url 'Formulario'%}">Registrar</a></li>
+                        <li><a href="{%url 'Contacto'%}">Contacto</a></li>
+                </ul>
+                <!--/fin menu-->
+
+
+            </div>
+        </div>
+        <!--/sidebar-->
+
+    </div>
+    
+    
+
+    {% block contenido %} <!-- Template Tag-->
+    <!--block sirve para inidcar que colocaremos un bloque de contenido a traves de nuetsra 
+    variable content-->
+    {% endblock %}
+
+
+    
+
+
+
+
+    
+</body>
+</html>
